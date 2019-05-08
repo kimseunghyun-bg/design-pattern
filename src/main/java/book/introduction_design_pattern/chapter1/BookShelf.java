@@ -1,22 +1,19 @@
 package book.introduction_design_pattern.chapter1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BookShelf implements Aggregate {
-    private final List<Book> books;
+    private final Book[] books;
     private int last = 0;
 
-    BookShelf() {
-        this.books = new ArrayList<>();
+    BookShelf(int maxSize) {
+        this.books = new Book[maxSize];
     }
 
     Book getBookAt(int index) {
-        return books.get(index);
+        return books[index];
     }
 
     void appendBook(Book book) {
-        this.books.add(book);
+        this.books[last] = book;
         last++;
     }
 
