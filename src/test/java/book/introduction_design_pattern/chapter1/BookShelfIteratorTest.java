@@ -5,9 +5,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 public class BookShelfIteratorTest {
     private BookShelf bookShelf;
@@ -15,7 +15,7 @@ public class BookShelfIteratorTest {
 
     @Before
     public void setUp() {
-        bookShelf = new BookShelf();
+        bookShelf = new BookShelf(10);
 
         bookShelfIterator = new BookShelfIterator(bookShelf);
     }
@@ -29,7 +29,7 @@ public class BookShelfIteratorTest {
     public void bookShelfIteratorTest() {
         // given
         // when
-        Iterator actualIterator = new BookShelf().iterator();
+        Iterator actualIterator = new BookShelf(10).iterator();
         // then
         assertThat(actualIterator, instanceOf(BookShelfIterator.class));
     }
