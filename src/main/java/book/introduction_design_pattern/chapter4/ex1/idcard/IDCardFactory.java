@@ -1,4 +1,4 @@
-package book.introduction_design_pattern.chapter4.ex1idcard;
+package book.introduction_design_pattern.chapter4.ex1.idcard;
 
 import book.introduction_design_pattern.chapter4.ex1.framework.Factory;
 import book.introduction_design_pattern.chapter4.ex1.framework.Product;
